@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+    min-height: 100vh;
+}
+
+label{    
+    position: relative;
+    top: -150px;
+    width: 160px;
+    height: 75px;
+    background: #212121;
+    border-radius: 10px;   
+}
+
+.f1{
+    margin-left: 150px;
+}
+
+label .i1, .i2, .i3, .i4, .i5{
+    appearance: none;
+}
+
+label span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75px;
+    height: 75px;
+    background: #333;
+    border: 6px solid #212121;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label .i1:checked ~ span{
+    left: 75px;
+}
+label .i2:checked ~ span{
+    left: 75px;
+}
+label .i3:checked ~ span{
+    left: 75px;
+}
+label .i4:checked ~ span{
+    left: 75px;
+}
+label .i5:checked ~ span{
+    left: 75px;
+}
+
+label span ion-icon{
+    color: rgba(255,255,255,0.25);
+    font-size: 2em;
+    transition: 0.5s;
+}
+
+label .i1:checked ~ span ion-icon{
+    color: rgba(255, 255, 255, 1);
+    filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff) drop-shadow(0 0 15px #fff);    
+}
+label .i2:checked ~ span ion-icon{
+    color: rgba(255, 255, 255, 1);
+    filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff) drop-shadow(0 0 15px #fff);    
+}
+label .i3:checked ~ span ion-icon{
+    color: rgba(255, 255, 255, 1);
+    filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff) drop-shadow(0 0 15px #fff);    
+}
+label .i4:checked ~ span ion-icon{
+    color: rgba(255, 255, 255, 1);
+    filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff) drop-shadow(0 0 15px #fff);    
+}
+label .i5:checked ~ span ion-icon{
+    color: rgba(255, 255, 255, 1);
+    filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff) drop-shadow(0 0 15px #fff);    
+}
+
+.bulb, .bulb1, .bulb2, .bulb3, .bulb4{
+    position: absolute;
+    top: 80px;
+    transform: translateX(-50px);
+    width: 300px;
+    height: 400px;
+    pointer-events: none;
+    background: url(bulb_off.jpg);
+    transition: 0.5s;
+}
+
+label .i1:checked ~ .bulb{
+    background: url(bulb_on.jpg);
+}
+label .i2:checked ~ .bulb1{
+    background: url(bulb_on.jpg);
+}
+label .i3:checked ~ .bulb2{
+    background: url(bulb_on.jpg);
+}
+label .i4:checked ~ .bulb3{
+    background: url(bulb_on.jpg);
+}
+label .i5:checked ~ .bulb4{
+    background: url(bulb_on.jpg);
+}
